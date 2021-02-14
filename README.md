@@ -1,52 +1,21 @@
-# Project Title
+# gRPC-go
 
-## Table of Contents
+## Prerequisites
 
-- [About](#about)
-- [Getting Started](#getting_started)
-- [Usage](#usage)
-- [Contributing](CONTRIBUTING.md)
-
-## About <a name = "about"></a>
-
-Write about 1-2 paragraphs describing the purpose of your project.
-
-## Getting Started <a name = "getting_started"></a>
-
-You can [create](https://cli.github.com/manual/gh_repo_create) a new repo using this template via the `gh` cli:
-
-``` bash
-# gh repo create [<name>] [flags]
-gh repo create gitops-labs/my-repo \
-    --template gitops-labs/template
+``` BASH
+export GO111MODULE=on
+go get google.golang.org/protobuf/cmd/protoc-gen-go \
+         google.golang.org/grpc/cmd/protoc-gen-go-grpc
 ```
 
-### Prerequisites
+## Greet ProtoBuffer API
 
-What things you need to install the software and how to install them.
+- Greeting Message
+  - first_name
+  - last_name
 
-``` bash
-brew install gh
-```
+- GreetRequest
+  - Greeting
 
-### Installing
-
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
-
-## Usage <a name = "usage"></a>
-
-Add notes about how to use the system.
+- GreetResponse
+  - result
